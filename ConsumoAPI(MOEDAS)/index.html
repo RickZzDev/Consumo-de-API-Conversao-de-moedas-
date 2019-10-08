@@ -1,0 +1,124 @@
+
+
+<html>
+    <head>
+        <title>
+        
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
+        
+        <style>
+            body{
+                background-image: url(img/gitpaper.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                
+            }
+
+            h1{
+                margin-left: -50px;
+            }
+            
+            #select_moeda{
+                width:110px;
+                margin-left: 9px;
+            }
+            
+            #moeda_txt_origem{
+                width: 100px;
+                margin-left: 28px;
+            }
+            
+            #select_destino{
+                width: 100px;
+            }
+            
+            #resultado{
+                width: 100px;
+                margin-left: 30px;
+            }
+            
+            #container1{
+                background-image: url(img/gitpaper);
+                width: 590px;
+                height: 350px;
+                background-color:gray;
+                margin-left: auto;
+                margin-right: auto;
+                
+                box-sizing: border-box;
+                margin-top:150px;
+                
+            }
+
+            #titulo{
+                margin-left: 70px;
+            }
+        </style>
+        <meta charset="utf-8">
+       
+    </head>
+    
+    <body>
+   
+        <div id="container1" class="shadow p-3 mb-5 bg-white rounded">
+            
+
+
+            <h1 id="titulo">Conversão de moedas</h1>
+            <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Moeda Inicial</label>
+                    </div>
+                    <select class="custom-select" id="select_moeda">
+                            <option>Escolha</option>
+                            <option id ="opt" value="Real">Real</option>
+                            <option id ="opt" value="USD">Dollar</option>
+                            <option id ="opt" value="ARS">Peso Argentino</option>
+                            <option id ="opt" value="BTC">Bitcoin</option>
+                            <option id ="opt" value="EUR">Euro</option>
+                            <option id ="opt" value="GBP">Pound Sterling</option>
+                    </select>
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Valor:</span>
+                    </div>
+                    <input name="moeda_txt_origem" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="moeda_txt_origem">
+            </div>
+
+            <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Converter Para</label>
+                    </div>
+                    <select class="custom-select" id="select_destino">
+                            <option>Escolha</option>
+                            <option id ="opt" value="REAL">Real</option>
+                            <option id ="opt" value="USD">Dollar</option>
+                            <option id ="opt" value="ARS">Peso Argentino</option>
+                            <option id ="opt" value="BTC">Bitcoin</option>
+                            <option id ="opt" value="EUR">Euro</option>
+                            <option id ="opt" value="GBP">Pound Sterling</option>
+                    </select>
+            </div>
+            
+         <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm"  >Valor convertido:</span>
+                    </div>
+                    <input name="moeda_txt_origem" type="text" class="form-control" readonly=“true” aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="resultado">
+            </div>
+            <!-- <input type="text" id="resultado"> -->
+            <button type="button" class="btn btn-outline-secondary" id="Calcular">Converter</button>
+           
+        </div>
+         <script src="script.js"></script>
+    </body>
+</html>
